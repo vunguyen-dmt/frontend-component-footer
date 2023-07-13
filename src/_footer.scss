@@ -1,6 +1,7 @@
 $gray-footer: #fcfcfc !default;
 
 .footer-wrapper {
+  font-family:'Open Sans', 'Helvetica Neue', 'Roboto','Arial', sans-serif;
   background-color: #878787;
   color: white;
   .with-icon {
@@ -20,7 +21,7 @@ $gray-footer: #fcfcfc !default;
   }
 
   .footer {
-    max-width: 1200px;
+    max-width: 1450px;
   }
 
 }
@@ -44,4 +45,9 @@ $gray-footer: #fcfcfc !default;
       margin: 0 5px 5px 0;
     }
   }
+}
+
+.footer-logo {
+  height: 63px;
+  max-width: 100%;
 }
