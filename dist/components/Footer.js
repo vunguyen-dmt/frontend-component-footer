@@ -94,7 +94,7 @@ var SiteFooter = /*#__PURE__*/function (_React$Component) {
         className: "footer container py-3"
       }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("img", {
         alt: "logo",
-        className: "logo",
+        className: "footer-logo",
         src: footerLogo
       })), /*#__PURE__*/React.createElement("div", {
         className: "info-rows"
@@ -129,13 +129,13 @@ var SiteFooter = /*#__PURE__*/function (_React$Component) {
       }), " Facebook "), /*#__PURE__*/React.createElement("div", {
         className: "with-icon"
       }, /*#__PURE__*/React.createElement("span", {
-        "class": "pgn__icon"
+        className: "pgn__icon"
       }, /*#__PURE__*/React.createElement("svg", {
         xmlns: "http://www.w3.org/2000/svg",
         width: "24",
         height: "24",
         fill: "none",
-        "class": "bi bi-youtube",
+        className: "bi bi-youtube",
         viewBox: "0 0 16 16",
         role: "img",
         focusable: "false",
@@ -146,13 +146,13 @@ var SiteFooter = /*#__PURE__*/function (_React$Component) {
       }))), "Youtube"), /*#__PURE__*/React.createElement("div", {
         className: "with-icon"
       }, /*#__PURE__*/React.createElement("span", {
-        "class": "pgn__icon"
+        className: "pgn__icon"
       }, /*#__PURE__*/React.createElement("svg", {
         xmlns: "http://www.w3.org/2000/svg",
         width: "24",
         height: "24",
         fill: "none",
-        "class": "bi bi-instagram",
+        className: "bi bi-instagram",
         viewBox: "0 0 16 16",
         role: "img",
         focusable: "false",
