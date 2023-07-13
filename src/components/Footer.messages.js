@@ -151,6 +151,31 @@ const messages = defineMessages({
     defaultMessage: 'Page Footer',
     description: 'aria-label for the footer component',
   },
+  Information: {
+    id: 'Information',
+    defaultMessage: 'Information',
+    description: '',
+  },
+  'DIGITAL LEARNING CENTER - HUTECH': {
+    id: 'DIGITAL LEARNING CENTER - HUTECH',
+    defaultMessage: 'DIGITAL LEARNING CENTER - HUTECH',
+    description: '',
+  },
+  '475A Dien Bien Phu, Ward 25, Binh Thanh District, Ho Chi Minh City': {
+    id: '475A Dien Bien Phu, Ward 25, Binh Thanh District, Ho Chi Minh City',
+    defaultMessage: '475A Dien Bien Phu, Ward 25, Binh Thanh District, Ho Chi Minh City',
+    description: 't',
+  },
+  Connect: {
+    id: 'Connect',
+    defaultMessage: 'Connect',
+    description: '',
+  },
+  'Download App': {
+    id: 'Download App',
+    defaultMessage: 'Download Appr',
+    description: '',
+  },
 });
 
 export default messages;
