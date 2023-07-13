@@ -173,7 +173,7 @@ const messages = defineMessages({
   },
   'Download App': {
     id: 'Download App',
-    defaultMessage: 'Download Appr',
+    defaultMessage: 'Download App',
     description: '',
   },
 });
