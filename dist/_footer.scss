@@ -1,0 +1,47 @@
+$gray-footer: #fcfcfc !default;
+
+.footer-wrapper {
+  background-color: #878787;
+  color: white;
+  .with-icon {
+    display: flex;
+    align-items: center;
+    padding: 4px 0;
+    .pgn__icon {
+      margin-right: 5px;
+    }
+    svg {
+      fill: white;
+    }
+  }
+  .title {
+    font-weight: 500;
+    padding: 4px 0;
+  }
+
+  .footer {
+    max-width: 1200px;
+  }
+
+}
+
+.info-rows {
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  >div {
+    margin-right: 20px;
+    margin-top: 20px;
+  }
+}
+
+.download {
+  .images {
+    display: flex;
+    align-items: center;
+    img {
+      max-width: 100%;
+      margin: 0 5px 5px 0;
+    }
+  }
+}
