@@ -40,7 +40,7 @@ var LanguageSelector = function LanguageSelector(_ref) {
       value: value
     }, label);
   })), /*#__PURE__*/React.createElement("button", {
-    className: "btn btn-outline-primary btn-sm",
+    className: "btn btn-outline-primary btn-sm change-language-submit-btn",
     type: "submit"
   }, /*#__PURE__*/React.createElement(FormattedMessage, {
     id: "footer.languageForm.submit.label",
