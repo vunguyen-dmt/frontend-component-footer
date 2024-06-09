@@ -11,10 +11,6 @@ import {
 import { Icon } from '@edx/paragon';
 import messages from './Footer.messages';
 import LanguageSelector from './LanguageSelector';
-import footerLogo from '../assets/images/footer-logo.png';
-import androidImage from '../assets/images/android.png';
-import iosImage from '../assets/images/ios.png';
-import qrImage from '../assets/images/qr.png';
 
 ensureConfig([
   'LMS_BASE_URL',
@@ -51,39 +47,12 @@ class SiteFooter extends React.Component {
     const showLanguageSelector = supportedLanguages.length > 0 && onLanguageSelected;
     const { config } = this.context;
 
-    // return (
-    //   <footer
-    //     role="contentinfo"
-    //     className="footer d-flex border-top py-3 px-4"
-    //   >
-    //     <div className="container-fluid d-flex">
-    //       <a
-    //         className="d-block"
-    //         href={config.LMS_BASE_URL}
-    //         aria-label={intl.formatMessage(messages['footer.logo.ariaLabel'])}
-    //       >
-    //         <img
-    //           style={{ maxHeight: 45 }}
-    //           src={logo || config.LOGO_TRADEMARK_URL}
-    //           alt={intl.formatMessage(messages['footer.logo.altText'])}
-    //         />
-    //       </a>
-    //       <div className="flex-grow-1" />
-    //       {showLanguageSelector && (
-    //         <LanguageSelector
-    //           options={supportedLanguages}
-    //           onSubmit={onLanguageSelected}
-    //         />
-    //       )}
-    //     </div>
-    //   </footer>
-    // );
     return (
       <div className="footer-wrapper">
         <div className="footer container py-3">
           <div className="footer-logo-wrapper">
             <div>
-              <img alt="logo" className="footer-logo" src={footerLogo} />
+              <img alt="logo" className="footer-logo" src="https://d10g66pf9vjy7h.cloudfront.net/media/home-page-resources/footer-logo.png" />
             </div>
             <div className="footer-language-selector-wrapper">
               {showLanguageSelector && (
@@ -112,14 +81,14 @@ class SiteFooter extends React.Component {
               <div className="title">{intl.formatMessage(messages['Download App'])}</div>
               <div className="images">
                 <div>
-                  <div><a href="https://apps.apple.com/us/app/hutech-x/id1632853626"><img alt="ios-app" src={iosImage} /></a></div>
-                  <div><a href="https://play.google.com/store/apps/details?id=vn.edu.hutech.lms"><img alt="android-app" src={androidImage} /></a></div>
+                  <div><a href="https://apps.apple.com/us/app/hutech-x/id1632853626"><img alt="ios-app" src="https://d24mgaater58cv.cloudfront.net/images/App-Store.png" /></a></div>
+                  <div><a href="https://play.google.com/store/apps/details?id=vn.edu.hutech.lms"><img alt="android-app" src="https://d24mgaater58cv.cloudfront.net/images/Google-Play.png" /></a></div>
                 </div>
-                <div><img alt="qr" src={qrImage} /></div>
+                <div><img alt="qr" src="https://d24mgaater58cv.cloudfront.net/images/hutech-elearning-app-download-qr.png" /></div>
               </div>
             </div>
           </div>
-          <div className="text-right pt-3 pl-3 pr-3">© 2022 HUTECH. All rights reserved.</div>
+          <div className="text-right pt-3 pl-3 pr-3">© 2024 HUTECH. All rights reserved.</div>
         </div>
       </div>
     );
