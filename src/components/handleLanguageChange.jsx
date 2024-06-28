@@ -19,9 +19,11 @@ export function getCookie(cookieName) {
 
 export const getCurrentLanguageCode = () => getCookie(getConfig().LANGUAGE_PREFERENCE_COOKIE_NAME) || 'en';
 const getLMSDomain = () => `.${getConfig().LMS_BASE_URL.replace('https://', '')}`;
+const getStudioDomain = () => `.${getConfig().STUDIO_BASE_URL.replace('https://', '')}`;
 
 export const handleLanguageChange = (value) => {
   setCookie(getConfig().LANGUAGE_PREFERENCE_COOKIE_NAME, value, 30, getLMSDomain());
+  setCookie(getConfig().LANGUAGE_PREFERENCE_COOKIE_NAME, value, 30, getStudioDomain());
   setTimeout(() => {
     window.location.reload();
   }, 50);

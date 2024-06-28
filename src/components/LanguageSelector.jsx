@@ -1,11 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { injectIntl, intlShape, FormattedMessage } from '@edx/frontend-platform/i18n';
+import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
+import { getCurrentLanguageCode } from './handleLanguageChange';
 import messages from './Footer.messages';
 
 const LanguageSelector = ({
   intl, options, onSubmit, ...props
 }) => {
+
+  const currentLanguageCode = getCurrentLanguageCode();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const languageCode = e.target.elements['site-footer-language-select'].value;
@@ -26,7 +30,7 @@ const LanguageSelector = ({
           id="site-footer-language-select"
           className="form-control-sm mx-2"
           name="site-footer-language-select"
-          defaultValue={intl.locale}
+          defaultValue={currentLanguageCode}
         >
           {options.map(({ value, label }) => <option key={value} value={value}>{label}</option>)}
         </select>

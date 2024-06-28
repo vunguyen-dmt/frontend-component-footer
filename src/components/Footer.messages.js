@@ -2,23 +2,23 @@ import { defineMessages } from '@edx/frontend-platform/i18n';
 
 const messages = defineMessages({
   Information: {
-    id: 'footer.Information',
+    id: 'footer.information',
     defaultMessage: 'Information',
   },
   DLC: {
-    id: 'footer.DLC',
+    id: 'footer.dlc',
     defaultMessage: 'DIGITAL LEARNING CENTER - HUTECH',
   },
   Address: {
-    id: 'footer.Address',
+    id: 'footer.address',
     defaultMessage: '475A Dien Bien Phu, Ward 25, Binh Thanh District, Ho Chi Minh City',
   },
   Connect: {
-    id: 'footer.Connect',
+    id: 'footer.connect',
     defaultMessage: 'Connect',
   },
   DownloadApp: {
-    id: 'footer.DownloadApp',
+    id: 'footer.download-app',
     defaultMessage: 'Download App',
   },
   SelectLanguageLabel: {
@@ -30,7 +30,7 @@ const messages = defineMessages({
     defaultMessage: 'Apply',
   },
   AllRightsReserved: {
-    id: 'footer.AllRightsReserved',
+    id: 'footer.allRightsReserved',
     defaultMessage: 'All rights reserved',
   }
 });
