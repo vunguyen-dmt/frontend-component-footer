@@ -7,8 +7,8 @@ import { AppContext } from '@edx/frontend-platform/react';
 
 import {
   Home, LocationOn, LocalPhone, Email, Facebook, BsInstagram,
-} from '@edx/paragon/icons';
-import { Icon } from '@edx/paragon';
+} from '@openedx/paragon/icons';
+import { Icon } from '@openedx/paragon';
 import messages from './Footer.messages';
 import LanguageSelector from './LanguageSelector';
 
