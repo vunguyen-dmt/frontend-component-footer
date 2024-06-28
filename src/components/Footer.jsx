@@ -67,7 +67,7 @@ class SiteFooter extends React.Component {
             <div className="info">
             <div className="title">{intl.formatMessage(messages.Information)}</div>
             <div className="with-icon"><Icon src={Home} />{intl.formatMessage(messages.DLC)}</div>
-              <div className="with-icon"><Icon src={LocationOn} /><a href="https://maps.app.goo.gl/Z2LgC4AzB9E84wL78">{formatMessage(messages.Address)}</a></div>
+              <div className="with-icon"><Icon src={LocationOn} /><a href="https://maps.app.goo.gl/Z2LgC4AzB9E84wL78">{intl.formatMessage(messages.Address)}</a></div>
             <div className="with-icon"><Icon src={LocalPhone} /><a href="tel:+8402854499998">(028) 5449 9998</a></div>
             <div className="with-icon"><Icon src={Email} /> <a href="mailto: dayhocso@hutech.edu.vn">dayhocso@hutech.edu.vn</a></div>
             </div>
