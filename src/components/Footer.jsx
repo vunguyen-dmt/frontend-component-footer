@@ -12,6 +12,7 @@ import { Icon } from '@openedx/paragon';
 import messages from './Footer.messages';
 import LanguageSelector from './LanguageSelector';
 import { handleLanguageChange } from './handleLanguageChange';
+import '../_footer.scss';
 
 ensureConfig([
   'LMS_BASE_URL',
