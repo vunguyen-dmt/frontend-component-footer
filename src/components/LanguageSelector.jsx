@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { injectIntl, intlShape, FormattedMessage } from '@edx/frontend-platform/i18n';
+import { useIntl } from '@edx/frontend-platform/i18n';
+import messages from './Footer.messages';
 
 const LanguageSelector = ({
-  intl, options, onSubmit, ...props
+  options, onSubmit, ...props
 }) => {
+  const intl = useIntl();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const languageCode = e.target.elements['site-footer-language-select'].value;
@@ -18,13 +21,8 @@ const LanguageSelector = ({
       {...props}
     >
       <div className="form-group">
-        {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
         <label htmlFor="site-footer-language-select" className="d-inline-block m-0">
-          <FormattedMessage
-            id="footer.languageForm.select.label"
-            defaultMessage="Choose Language"
-            description="The label for the laguage select part of the language selection form."
-          />
+          {intl.formatMessage(messages.SelectLanguageLabel)}
         </label>
         <select
           id="site-footer-language-select"
@@ -35,11 +33,7 @@ const LanguageSelector = ({
           {options.map(({ value, label }) => <option key={value} value={value}>{label}</option>)}
         </select>
         <button className="btn btn-outline-primary btn-sm change-language-submit-btn" type="submit">
-          <FormattedMessage
-            id="footer.languageForm.submit.label"
-            defaultMessage="Apply"
-            description="The label for button to submit the language selection form."
-          />
+          {intl.formatMessage(messages.Apply)}
         </button>
       </div>
     </form>
@@ -47,7 +41,6 @@ const LanguageSelector = ({
 };
 
 LanguageSelector.propTypes = {
-  intl: intlShape.isRequired,
   onSubmit: PropTypes.func.isRequired,
   options: PropTypes.arrayOf(PropTypes.shape({
     value: PropTypes.string,
@@ -55,4 +48,4 @@ LanguageSelector.propTypes = {
   })).isRequired,
 };
 
-export default injectIntl(LanguageSelector);
+export default LanguageSelector;
