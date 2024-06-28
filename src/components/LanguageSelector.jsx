@@ -1,13 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useIntl } from '@edx/frontend-platform/i18n';
+import { injectIntl, intlShape, FormattedMessage } from '@edx/frontend-platform/i18n';
 import messages from './Footer.messages';
 
 const LanguageSelector = ({
-  options, onSubmit, ...props
+  intl, options, onSubmit, ...props
 }) => {
-  const intl = useIntl();
-
   const handleSubmit = (e) => {
     e.preventDefault();
     const languageCode = e.target.elements['site-footer-language-select'].value;
@@ -41,6 +39,7 @@ const LanguageSelector = ({
 };
 
 LanguageSelector.propTypes = {
+  intl: intlShape.isRequired,
   onSubmit: PropTypes.func.isRequired,
   options: PropTypes.arrayOf(PropTypes.shape({
     value: PropTypes.string,
@@ -48,4 +47,4 @@ LanguageSelector.propTypes = {
   })).isRequired,
 };
 
-export default LanguageSelector;
+export default injectIntl(LanguageSelector);

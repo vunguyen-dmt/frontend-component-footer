@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useIntl } from '@edx/frontend-platform/i18n';
+import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
 import { sendTrackEvent } from '@edx/frontend-platform/analytics';
 import { ensureConfig } from '@edx/frontend-platform/config';
 import { AppContext } from '@edx/frontend-platform/react';
@@ -41,8 +41,9 @@ class SiteFooter extends React.Component {
     const {
       supportedLanguages,
       onLanguageSelected,
+      logo,
+      intl
     } = this.props;
-    const { formatMessage } = useIntl();
     const showLanguageSelector = supportedLanguages.length > 0 && onLanguageSelected;
     const { config } = this.context;
 
@@ -64,8 +65,8 @@ class SiteFooter extends React.Component {
           </div>
           <div className="info-rows">
             <div className="info">
-            <div className="title">{formatMessage(messages.Information)}</div>
-            <div className="with-icon"><Icon src={Home} />{formatMessage(messages.DLC)}</div>
+            <div className="title">{intl.formatMessage(messages.Information)}</div>
+            <div className="with-icon"><Icon src={Home} />{intl.formatMessage(messages.DLC)}</div>
               <div className="with-icon"><Icon src={LocationOn} /><a href="https://maps.app.goo.gl/Z2LgC4AzB9E84wL78">{formatMessage(messages.Address)}</a></div>
             <div className="with-icon"><Icon src={LocalPhone} /><a href="tel:+8402854499998">(028) 5449 9998</a></div>
             <div className="with-icon"><Icon src={Email} /> <a href="mailto: dayhocso@hutech.edu.vn">dayhocso@hutech.edu.vn</a></div>
@@ -87,7 +88,7 @@ class SiteFooter extends React.Component {
               </div>
             </div>
           </div>
-          <div className="text-right pt-3 pl-3 pr-3">© 2024 HUTECH eLearning. {formatMessage(messages.AllRightsReserved)}.</div>
+          <div className="text-right pt-3 pl-3 pr-3">© 2024 HUTECH eLearning. {intl.formatMessage(messages.AllRightsReserved)}.</div>
           </div>
       </div>
     );
@@ -112,5 +113,5 @@ SiteFooter.defaultProps = {
   supportedLanguages: [],
 };
 
-export default SiteFooter;
+export default injectIntl(SiteFooter);
 export { EVENT_NAMES };
