@@ -11,6 +11,7 @@ import {
 import { Icon } from '@openedx/paragon';
 import messages from './Footer.messages';
 import LanguageSelector from './LanguageSelector';
+import { handleLanguageChange } from './handleLanguageChange';
 
 ensureConfig([
   'LMS_BASE_URL',
@@ -39,12 +40,10 @@ class SiteFooter extends React.Component {
 
   render() {
     const {
-      supportedLanguages,
-      onLanguageSelected,
+      showLanguageSelector,
       logo,
       intl
     } = this.props;
-    const showLanguageSelector = supportedLanguages.length > 0 && onLanguageSelected;
     const { config } = this.context;
 
     return (
@@ -57,8 +56,11 @@ class SiteFooter extends React.Component {
             <div className="footer-language-selector-wrapper">
               {showLanguageSelector && (
               <LanguageSelector
-                options={supportedLanguages}
-                onSubmit={onLanguageSelected}
+                options={[
+                  { label: 'English', value: 'en' },
+                  { label: 'Tiếng Việt', value: 'vi' },
+                ]}
+                onSubmit={handleLanguageChange}
               />
               )}
             </div>
@@ -100,17 +102,12 @@ SiteFooter.contextType = AppContext;
 SiteFooter.propTypes = {
   intl: intlShape.isRequired,
   logo: PropTypes.string,
-  onLanguageSelected: PropTypes.func,
-  supportedLanguages: PropTypes.arrayOf(PropTypes.shape({
-    label: PropTypes.string.isRequired,
-    value: PropTypes.string.isRequired,
-  })),
+  showLanguageSelector: PropTypes.bool,
 };
 
 SiteFooter.defaultProps = {
   logo: undefined,
-  onLanguageSelected: undefined,
-  supportedLanguages: [],
+  showLanguageSelector: false,
 };
 
 export default injectIntl(SiteFooter);
