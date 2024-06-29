@@ -6,12 +6,11 @@ import { ensureConfig } from '@edx/frontend-platform/config';
 import { AppContext } from '@edx/frontend-platform/react';
 
 import {
-  Home, LocationOn, LocalPhone, Email, Facebook, BsInstagram,
+  Home, LocationOn, LocalPhone, Email, Facebook,
 } from '@openedx/paragon/icons';
 import { Icon } from '@openedx/paragon';
 import messages from './Footer.messages';
 import LanguageSelector from './LanguageSelector';
-import { handleLanguageChange } from './handleLanguageChange';
 import '../_footer.scss';
 
 ensureConfig([
@@ -61,7 +60,6 @@ class SiteFooter extends React.Component {
                   { label: 'English', value: 'en' },
                   { label: 'Tiếng Việt', value: 'vi' },
                 ]}
-                onSubmit={handleLanguageChange}
               />
               )}
             </div>

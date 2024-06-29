@@ -21,7 +21,8 @@ export const getCurrentLanguageCode = () => getCookie(getConfig().LANGUAGE_PREFE
 const getLMSDomain = () => `.${getConfig().LMS_BASE_URL.replace('https://', '')}`;
 const getStudioDomain = () => `.${getConfig().STUDIO_BASE_URL.replace('https://', '')}`;
 
-export const handleLanguageChange = (value) => {
+export const handleLanguageChange = (e) => {
+  const value = e.target.value;
   setCookie(getConfig().LANGUAGE_PREFERENCE_COOKIE_NAME, value, 30, getLMSDomain());
   setCookie(getConfig().LANGUAGE_PREFERENCE_COOKIE_NAME, value, 30, getStudioDomain());
   setTimeout(() => {
