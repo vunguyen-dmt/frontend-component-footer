@@ -34,7 +34,7 @@
   },
   "homepage": "https://github.com/openedx/frontend-component-footer#readme",
   "devDependencies": {
-    "@edx/brand": "npm:@openedx/brand-openedx@^1.2.2",
+    "@edx/brand": "github:vunguyen-dmt/brand-openedx#hutech_v1.2.0",
     "@edx/browserslist-config": "^1.1.1",
     "@edx/frontend-platform": "8.1.1",
     "@edx/reactifex": "^2.1.1",
