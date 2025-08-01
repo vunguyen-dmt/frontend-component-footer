@@ -11,7 +11,7 @@ const messages = defineMessages({
   },
   Address: {
     id: 'footer.address',
-    defaultMessage: '475A Dien Bien Phu, Ward 25, Binh Thanh District, Ho Chi Minh City',
+    defaultMessage: '475A Dien Bien Phu, Thanh My Tay Ward, Ho Chi Minh City',
   },
   Connect: {
     id: 'footer.connect',

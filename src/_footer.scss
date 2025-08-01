@@ -1,51 +1,91 @@
 $gray-footer: #fcfcfc !default;
 
+@font-face {
+	font-family: "AvoRegular";
+	src: local("AvoRegular"), url("./fonts/SVN-Avo_Regular.ttf");
+}
+
+@font-face {
+	font-family: "AvoBold";
+	src: local("AvoBold"), url("./fonts/SVN-Avo_Bold.ttf");
+}
+
 .footer-wrapper {
-  font-family:'Open Sans', 'Helvetica Neue', 'Roboto','Arial', sans-serif;
-  background-color: #878787;
+  // font-family:'Open Sans', 'Helvetica Neue', 'Roboto','Arial', sans-serif;
+  background-color: #001F63;
   color: white;
-  .with-icon, .with-icon a {
-    color: white;
+  font-family: AvoRegular, Roboto, Arial, sans-serif;
+
+  .info-rows {
+    justify-content: space-between;
     display: flex;
-    align-items: flex-start;
-    padding: 4px 0;
-    .pgn__icon {
-      margin-right: 5px;
-      margin-top: 2px;
+    flex-wrap: wrap;
+    
+    >div {
+      margin-right: 4px;
+      margin-top: 20px;
     }
-    svg {
-      fill: white;
+  
+    .with-icon, .with-icon a {
+      color: white;
+      display: flex;
+      align-items: flex-start;
+      padding: 4px 0;
+      font-family: AvoBold;
+      font-size: 1rem;
+      text-decoration: none;
+  
+      .pgn__icon {
+        margin-right: 5px;
+        margin-top: 2px;
+      }
+  
+      svg {
+        fill: white;
+      }
     }
-  }
-  .title {
-    font-weight: 600;
-    padding: 4px 0;
+
+    .title {
+      font-weight: 600;
+      padding: 4px 0;
+      font-size: 1rem;
+    }
+
+    .info {
+
+    }
+
+    .download {
+      .images {
+        display: flex;
+        align-items: center;
+  
+        img {
+          max-width: 100%;
+          margin: 0 10px 5px 0;
+        }
+      }
+    }
+  
+    .connect {
+      .title {
+        
+      }
+  
+      .social-name {
+        font-family: AvoRegular, Roboto, Arial, sans-serif;
+        font-weight: unset !important;
+      }
+    }
+
   }
 
   .footer {
     max-width: 1450px;
   }
 
-}
-
-.info-rows {
-  justify-content: space-between;
-  display: flex;
-  flex-wrap: wrap;
-  >div {
-    margin-right: 20px;
-    margin-top: 20px;
-  }
-}
-
-.download {
-  .images {
-    display: flex;
-    align-items: center;
-    img {
-      max-width: 100%;
-      margin: 0 5px 5px 0;
-    }
+  .copyright {
+    font-size: small;
   }
 }
 
