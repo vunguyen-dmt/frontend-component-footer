@@ -108,6 +108,15 @@ class SiteFooter extends React.Component {
                 </a>
               </div>
             </div>
+            <div className="legal">
+              <div className="title">{intl.formatMessage(messages.legal)}</div>
+              <div className="with-icon">
+                <a href="https://lms.hutech.edu.vn/tos">{intl.formatMessage(messages.tos)}</a>
+              </div>
+              <div className="with-icon">
+                <a href="https://lms.hutech.edu.vn/privacy">{intl.formatMessage(messages.privacy)}</a>
+              </div>
+            </div>
           </div>
           <div className="copyright pt-3">© 2025 HUTECH eLearning. {intl.formatMessage(messages.AllRightsReserved)}.</div>
         </div>

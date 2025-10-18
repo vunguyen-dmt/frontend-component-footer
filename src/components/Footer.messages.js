@@ -32,6 +32,18 @@ const messages = defineMessages({
   AllRightsReserved: {
     id: 'footer.allRightsReserved',
     defaultMessage: 'All rights reserved',
+  },
+  legal: {
+    id: 'footer.legal',
+    defaultMessage: 'Terms and policies',
+  },
+  tos: {
+    id: 'footer.tos',
+    defaultMessage: 'Terms of use',
+  },
+  privacy: {
+    id: 'footer.privacy',
+    defaultMessage: 'Privacy policy',
   }
 });
 
