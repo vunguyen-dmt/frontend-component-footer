@@ -51,7 +51,7 @@ class SiteFooter extends React.Component {
         <div className="footer container py-3">
           <div className="footer-logo-wrapper">
             <div>
-              <img alt="logo" className="footer-logo" src="https://hutech-media.goamazing.org/hutech-statics/media/images/footer-logo.png" />
+              <img alt="logo" className="footer-logo" src="https://hutech-media.goamazing-apps.org/common-assets/footer-logo.png" />
             </div>
             <div className="footer-language-selector-wrapper">
               {showLanguageSelector && (
@@ -76,10 +76,10 @@ class SiteFooter extends React.Component {
               <div className="title">{intl.formatMessage(messages.DownloadApp)}</div>
               <div className="images">
                 <div>
-                  <div><a href="https://apps.apple.com/us/app/hutech-x/id1632853626"><img alt="ios-app" src="https://hutech-media.goamazing.org/hutech-statics/media/images/App-Store.png" /></a></div>
-                  <div><a href="https://play.google.com/store/apps/details?id=vn.edu.hutech.lms"><img alt="android-app" src="https://hutech-media.goamazing.org/hutech-statics/media/images/Google-Play.png" /></a></div>
+                  <div><a href="https://apps.apple.com/us/app/hutech-x/id1632853626"><img alt="ios-app" src="https://hutech-media.goamazing-apps.org/common-assets/App-Store.png" /></a></div>
+                  <div><a href="https://play.google.com/store/apps/details?id=vn.edu.hutech.lms"><img alt="android-app" src="https://hutech-media.goamazing-apps.org/common-assets/Google-Play.png" /></a></div>
                 </div>
-                <div><img alt="qr" src="https://hutech-media.goamazing.org/hutech-statics/media/images/hutech-elearning-app-download-qr.png" /></div>
+                <div><img alt="qr" src="https://hutech-media.goamazing-apps.org/common-assets/hutech-elearning-app-download-qr.png" /></div>
               </div>
             </div>
 
